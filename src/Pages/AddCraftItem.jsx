@@ -1,9 +1,13 @@
+import Swal from "sweetalert2";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProviderContext/AuthProviderContext";
 
 
 const AddCraftItem = () => {
-
+    const { user } = useContext(AuthContext)
+    console.log(user)
     const handleAddCraftItem = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -21,6 +25,26 @@ const AddCraftItem = () => {
 
         const addItemValue = { image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, User_Email, User_Name }
         console.log(addItemValue);
+        fetch('http://localhost:5000/addCraftItem', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(addItemValue),
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Item Added successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            });
+
     }
 
     return (
@@ -53,10 +77,15 @@ const AddCraftItem = () => {
                     <div className="flex flex-row gap-4 ">
                         <div>
                             <label className="form-control w-full">
-                                <div className="">
-                                    <span className="label-text">subcategory Name</span>
+                                <div>
+                                    <label className="form-control w-full">
+                                        <div className="">
+                                            <span className="label-text">stockStatus</span>
+                                        </div>
+                                        <input type="text" placeholder="example- In stock, Made to Order" name="stockStatus" className="input input-bordered w-full max-w-xs" />
+                                    </label>
                                 </div>
-                                <input type="text" placeholder="subcategory Name" name="subcategory_Name" className="input input-bordered w-full max-w-xs" />
+                                {/* <input type="text" placeholder="subcategory Name" name="subcategory_Name" className="input input-bordered w-full max-w-xs" /> */}
                             </label>
                         </div>
                         <div>
@@ -111,39 +140,45 @@ const AddCraftItem = () => {
                     </div>
                     {/* 5th */}
                     <div className="flex flex-row gap-4 ">
-                        <div>
-                            <label className="form-control w-full">
-                                <div className="">
-                                    <span className="label-text">stockStatus</span>
-                                </div>
-                                <input type="text" placeholder="example- In stock, Made to Order" name="stockStatus" className="input input-bordered w-full max-w-xs" />
-                            </label>
-                        </div>
-                        <div>
-                            <label className="form-control w-full">
-                                <div className="">
-                                    <span className="label-text">User Email</span>
-                                </div>
-                                <input type="email" placeholder="User Email"
-                                    name="User_Email" className="input input-bordered w-full max-w-xs" />
-                            </label>
-                        </div>
-                    </div>
-                    {/* 6th */}
                     <div className="flex flex-row gap-4 ">
                         <div>
                             <label className="form-control w-full">
                                 <div className="">
                                     <span className="label-text">User Name</span>
                                 </div>
-                                <input type="text" placeholder="User Name"
+                                <input defaultValue={user.displayName}
+                                    type="text" placeholder="User Name"
                                     name="User_Name" className="input input-bordered w-full " />
                             </label>
                         </div>
 
                     </div>
+                       
+                        <div>
+                            <label className="form-control w-full">
+                                <div className="">
+                                    <span className="label-text">User Email</span>
+                                </div>
+                                <input defaultValue={user.email} type="email" placeholder="User Email"
+                                    name="User_Email" className="input input-bordered w-full max-w-xs" />
+                            </label>
+                        </div>
+                    </div>
+                    {/* 6th */}
+                    
+                    <div className="w-2/5">
+                            <span className="label-text">subcategory Name</span>
+                            <select name="subcategory_Name" className="input input-bordered w-full ">
+                                <option value="Clay made pottery">Clay made pottery</option>
+                                <option value="Stoneware">Stoneware</option>
+                                <option value="Porcelain">Porcelain</option>
+                                <option value="Terra Cotta">Terra Cotta</option>
+                                <option value="Ceramics & Architectural">Ceramics & Architectural</option>
+                                <option value="Home decor pottery">Home decor pottery</option>
+                            </select>
+                        </div>
 
-                    <button className="btn btn-success w-3/4 md:w-2/3 lg:w-2/5 ml-14 md:ml-6 lg:ml-10">Add Item</button>
+                    <button className="btn btn-success w-3/4 md:w-2/3 lg:w-2/5 ml-14 md:ml-6 lg:ml-10">Add</button>
                 </form>
             </div>
 
