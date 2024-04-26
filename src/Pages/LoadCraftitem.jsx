@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const LoadCraftitem = ({ craftItem }) => {
-    const { image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, User_Email, User_Name } = craftItem;
+    const { _id, image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, User_Email, User_Name } = craftItem;
     return (
         <div>
             <div className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
@@ -11,7 +12,7 @@ const LoadCraftitem = ({ craftItem }) => {
                         <h2 className="text-3xl font-semibold tracking-wide">{item_name}</h2>
                         <p className="dark:text-gray-800">{short_description}</p>
                     </div>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button>
+                    <Link to={`/addCraftItem/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button></Link>
                 </div>
             </div>
         </div>

@@ -12,7 +12,7 @@ const Home = () => {
         <div className="space-y-10">
             <Navbar></Navbar>
             <Banner></Banner>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 h-full">
                 {
                     loadCraftItems.map((craftItem) => <LoadCraftitem key={craftItem._id} craftItem={craftItem}></LoadCraftitem>)
                 }
