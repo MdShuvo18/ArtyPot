@@ -2,14 +2,14 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 
-const Home = () => {
+const AddCraftItem = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h1>This is home</h1>
+            Add Craft Item
             <Footer></Footer>
         </div>
     );
 };
 
-export default Home;
+export default AddCraftItem;
