@@ -150,8 +150,9 @@ const Register = () => {
 
             </div>
             
-            <ToastContainer position="top-right" autoClose="2000"></ToastContainer>
+           
             <Footer></Footer>
+            <ToastContainer position="top-right" autoClose="2000"></ToastContainer>
         </div>
     );
 };

@@ -1,12 +1,13 @@
+import Banner from "./Banner";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 
 const Home = () => {
     return (
-        <div>
+        <div className="space-y-10">
             <Navbar></Navbar>
-            <h1>This is home</h1>
+            <Banner></Banner>
             <Footer></Footer>
         </div>
     );

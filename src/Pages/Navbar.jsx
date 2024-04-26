@@ -48,7 +48,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="animate__animated animate__flash btn btn-ghost text-lg lg:text-3xl font-extrabold text-purple-800 Poppins" >Potter's Palette</a>
+                <a className="animate__animated animate__flash btn btn-ghost text-lg lg:text-3xl font-extrabold text-purple-800 Poppins" >Pottery's Palette</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -77,7 +77,10 @@ const Navbar = () => {
                 {
                     user
                         ? <button onClick={handleSignOut} className="btn btn-success bg-green-700 text-black border-none">Sign Out</button>
-                        : <Link to='/login'> <button className="btn btn-success bg-green-700 text-black border-none">Login</button></Link>
+                        : <div>
+                        <Link to='/login'> <button className="btn btn-success bg-green-700 text-white border-none">Login</button></Link>
+                        <Link to='/register'> <button className="btn btn-success bg-green-700 text-white border-none">Register</button></Link>
+                        </div>
                 }
 
 
