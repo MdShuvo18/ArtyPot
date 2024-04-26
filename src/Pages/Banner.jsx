@@ -17,7 +17,7 @@ const Banner = () => {
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
             }}
             pagination={{
@@ -42,7 +42,7 @@ const Banner = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <div className='w-full h-[450px] relative'>
-                    <img className='w-full h-[450px]' src="https://i.ibb.co/CQKHQCD/vladimir-gladkov-d1h-KXg-FJUKw-unsplash.jpg" alt="" />
+                    <img className='w-full h-[450px]' src="https://i.ibb.co/sqSN4WY/angele-kamp-IJZY2y-XYsp8-unsplash.jpg" alt="" />
                     <div className='absolute top-24 left-12 space-y-4'>
                         <h1 className='text-4xl text-white'>
                             We Make Thing With Love

@@ -19,7 +19,7 @@ const Navbar = () => {
 
     const handleSignOut = () => {
         logOut()
-            .then(()=>{
+            .then(() => {
                 toast.success("Sign out successfully")
             })
             .catch()
@@ -38,7 +38,7 @@ const Navbar = () => {
     </>
     return (
         <div data-aos="flip-down" data-aos-duration="1000" className="navbar bg-teal-200">
-            
+
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +48,10 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="animate__animated animate__flash btn btn-ghost text-lg lg:text-3xl font-extrabold text-purple-800 Poppins" >Pottery's Palette</a>
+                
+                <a className="animate__animated animate__flash btn btn-ghost text-lg lg:text-3xl font-extrabold text-purple-800" >Pottery's Palette</a>
+                <img className="rounded-full w-12 h-12" src="https://i.ibb.co/6m3c07Q/images.png" alt="" />
+               
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -78,8 +81,8 @@ const Navbar = () => {
                     user
                         ? <button onClick={handleSignOut} className="btn btn-success bg-green-700 text-black border-none">Sign Out</button>
                         : <div>
-                        <Link to='/login'> <button className="btn btn-success bg-green-700 text-white border-none">Login</button></Link>
-                        <Link to='/register'> <button className="btn btn-success bg-green-700 text-white border-none">Register</button></Link>
+                            <Link to='/login'> <button className="btn btn-success bg-green-700 text-white border-none">Login</button></Link>
+                            <Link to='/register'> <button className="btn btn-success bg-green-700 text-white border-none">Register</button></Link>
                         </div>
                 }
 
