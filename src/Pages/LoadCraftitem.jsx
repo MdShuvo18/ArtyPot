@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const LoadCraftitem = ({ craftItem }) => {
     const { _id, image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, User_Email, User_Name } = craftItem;
+    // console.log(craftItem);
     return (
         <div>
             <div className="max-w-xs rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
