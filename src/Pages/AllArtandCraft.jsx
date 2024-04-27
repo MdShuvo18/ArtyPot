@@ -11,38 +11,34 @@ const AllArtandCraft = () => {
 
 
     return (
-        <div>
+        <div className="space-y-10">
             <Navbar></Navbar>
             <div>
-                {/* {
-                    allArtandCraft.map(artCraft => <LoadAllcraftItem key={artCraft._id} artCraft={artCraft}></LoadAllcraftItem>)
-                } */}
-
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Name</th>
-                                <th>Job</th>
-                                <th>Favorite Color</th>
+                                <th>Item Name</th>
+                                <th>Sub-Category Name</th>
+                                <th>Short Description</th>
                             </tr>
                         </thead>
                         <tbody>
-                          {
-                            allArtandCraft.map(allArtandCraftItem=>(
-                                <tr key={allArtandCraftItem._id}>
-                                    <td>
-                                        <img className="w-[200px] h-[200px]" src={allArtandCraftItem.image} alt="" />
-                                    </td>
-                                    <td>{allArtandCraftItem.item_name}</td>
-                                    <td>{allArtandCraftItem.subcategory_Name}</td>
-                                    <td>{allArtandCraftItem.short_description}</td>
-                                   <Link to={`/craftItemDetails/${allArtandCraftItem._id}`}> <td >View Details</td></Link>
-                                </tr>
-                            ))
-                          }
+                            {
+                                allArtandCraft.map(allArtandCraftItem => (
+                                    <tr key={allArtandCraftItem._id}>
+                                        <td>
+                                            <img className="w-[100px] h-[100px] border rounded-full" src={allArtandCraftItem.image} alt="" />
+                                        </td>
+                                        <td>{allArtandCraftItem.item_name}</td>
+                                        <td>{allArtandCraftItem.subcategory_Name}</td>
+                                        <td>{allArtandCraftItem.short_description}</td>
+                                        <td ><Link to={`/craftItemDetails/${allArtandCraftItem._id}`}>View Details</Link></td>
+                                    </tr>
+                                ))
+                            }
                         </tbody>
                     </table>
                 </div>

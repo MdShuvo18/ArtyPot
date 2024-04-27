@@ -20,10 +20,10 @@ const AddCraftItem = () => {
         const customization = form.customization.value;
         const processing_time = form.processing_time.value;
         const stockStatus = form.stockStatus.value;
-        const User_Email = form.User_Email.value;
+        const email = form.email.value;
         const User_Name = form.User_Name.value;
 
-        const addItemValue = { image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, User_Email, User_Name }
+        const addItemValue = { image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, email, User_Name }
         console.log(addItemValue);
         fetch('http://localhost:5000/addCraftItem', {
             method: "POST",
@@ -160,7 +160,7 @@ const AddCraftItem = () => {
                                     <span className="label-text">User Email</span>
                                 </div>
                                 <input defaultValue={user.email} type="email" placeholder="User Email"
-                                    name="User_Email" className="input input-bordered w-full max-w-xs" />
+                                    name="email" className="input input-bordered w-full max-w-xs" />
                             </label>
                         </div>
                     </div>

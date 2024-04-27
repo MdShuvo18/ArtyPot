@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const LoadCraftitem = ({ craftItem }) => {
-    const { _id, image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, User_Email, User_Name } = craftItem;
+    const { _id, image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, email, User_Name } = craftItem;
     // console.log(craftItem);
     return (
         <div>
