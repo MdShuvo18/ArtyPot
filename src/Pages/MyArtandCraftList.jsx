@@ -8,7 +8,8 @@ const MyArtandCraftList = () => {
 
     const { user } = useContext(AuthContext)
     // console.log(user)
-    const [myArtandCraftList, setMyArtandCraftList] = useState([])
+    const [myArtandCraftList, setMyArtandCraftList] = useState([]);
+    const [customizationFilter, setCustomizationFilter] = useState(null);
 
 
     useEffect(() => {
@@ -19,6 +20,13 @@ const MyArtandCraftList = () => {
                 setMyArtandCraftList(data);
             })
     }, [user])
+
+    const handleCustomization = (customization) => {
+        const toLowerCase = customization.toLowerCase();
+        setCustomizationFilter(toLowerCase)
+    }
+
+
     return (
         <div className="space-y-5">
             <Navbar></Navbar>
@@ -26,43 +34,45 @@ const MyArtandCraftList = () => {
                 <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="btn m-1">Customization</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Yes</a></li>
-                        <li><a>No</a></li>
+                        <li><button onClick={() => handleCustomization("Yes")}>Yes</button></li>
+                        <li><button onClick={() => handleCustomization("No")}>No</button></li>
+
                     </ul>
                 </div>
             </div>
             <div className="grid lg:grid-cols-2 justify-items-center gap-8">
                 {
-                    myArtandCraftList.map(myArtandCraft => <div key={myArtandCraft._id}>
-                        <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
-                            <div className="space-y-4">
-                                <div className="space-y-2">
-                                    <img src={myArtandCraft.image} alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
-                                    <div className="flex justify-between items-center text-xs">
-                                        <p>Price : {myArtandCraft.price}</p>
-                                        <p>Rating : {myArtandCraft.rating}</p>
+                    myArtandCraftList.filter(item => customizationFilter === null || item.customization.toLowerCase() === customizationFilter)
+                        .map(myArtandCraft => <div key={myArtandCraft._id}>
+                            <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
+                                <div className="space-y-4">
+                                    <div className="space-y-2">
+                                        <img src={myArtandCraft.image} alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
+                                        <div className="flex justify-between items-center text-xs">
+                                            <p>Price : {myArtandCraft.price}</p>
+                                            <p>Rating : {myArtandCraft.rating}</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="space-y-2">
-                                    <a rel="noopener noreferrer" href="#" className="block">
-                                        <h3 className="text-xl font-semibold dark:text-violet-600">{myArtandCraft.item_name}</h3>
-                                    </a>
-                                    <p className="leading-snug dark:text-gray-600">{myArtandCraft.short_description}</p>
+                                    <div className="space-y-2">
+                                        <a rel="noopener noreferrer" href="#" className="block">
+                                            <h3 className="text-xl font-semibold dark:text-violet-600">{myArtandCraft.item_name}</h3>
+                                        </a>
+                                        <p className="leading-snug dark:text-gray-600">{myArtandCraft.short_description}</p>
 
-                                </div>
-                                <div className="flex justify-between">
-                                    <p>Customization : {myArtandCraft.customization}</p>
-                                    <p>Stock Status : {myArtandCraft.stockStatus}</p>
-                                </div>
-                                <div className="flex justify-around">
-                                    <button className="btn btn-success">Update</button>
-                                    <button className="btn btn-success">Delete</button>
+                                    </div>
+                                    <div className="flex justify-between">
+                                        <p>Customization : {myArtandCraft.customization}</p>
+                                        <p>Stock Status : {myArtandCraft.stockStatus}</p>
+                                    </div>
+                                    <div className="flex justify-around">
+                                        <button className="btn btn-success">Update</button>
+                                        <button className="btn btn-success">Delete</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    )
+                        )
                 }
             </div>
             <Footer></Footer>
