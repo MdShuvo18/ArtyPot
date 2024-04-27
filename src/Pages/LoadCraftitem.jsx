@@ -13,7 +13,7 @@ const LoadCraftitem = ({ craftItem }) => {
                         <h2 className="text-3xl font-semibold tracking-wide">{item_name}</h2>
                         <p className="dark:text-gray-800">{short_description}</p>
                     </div>
-                    <Link to={`/addCraftItem/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button></Link>
+                    <Link to={`/craftItemDetails/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50">View Details</button></Link>
                 </div>
             </div>
         </div>

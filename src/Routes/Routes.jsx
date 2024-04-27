@@ -22,14 +22,15 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allArtandCraftsItem',
-                element: <AllArtandCraft></AllArtandCraft>
+                element: <AllArtandCraft></AllArtandCraft>,
+                loader: () => fetch('http://localhost:5000/addCraftItem')
             },
             {
                 path: '/AddCraftItem',
                 element: <PrivateRoutes><AddCraftItem></AddCraftItem></PrivateRoutes>
             },
             {
-                path: '/addCraftItem/:id',
+                path: '/craftItemDetails/:id',
                 element: <PrivateRoutes><CraftItemDetails></CraftItemDetails></PrivateRoutes>,
                 loader: () => fetch('http://localhost:5000/addCraftItem')
             },
