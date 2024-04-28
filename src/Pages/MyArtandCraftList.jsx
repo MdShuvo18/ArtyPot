@@ -2,11 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { AuthContext } from "../AuthProviderContext/AuthProviderContext";
+import { Link } from "react-router-dom";
 // {image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, email, User_Name}
 
 const MyArtandCraftList = () => {
 
     const { user } = useContext(AuthContext)
+    
     // console.log(user)
     const [myArtandCraftList, setMyArtandCraftList] = useState([]);
     const [customizationFilter, setCustomizationFilter] = useState(null);
@@ -65,8 +67,18 @@ const MyArtandCraftList = () => {
                                         <p>Stock Status : {myArtandCraft.stockStatus}</p>
                                     </div>
                                     <div className="flex justify-around">
-                                        <button className="btn btn-success">Update</button>
-                                        <button className="btn btn-success">Delete</button>
+                                        <Link to={`/updateList/${myArtandCraft._id}`}>
+                                            <a href="#_" className="relative px-6 py-3 font-bold text-black group">
+                                                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-green-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+                                                <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                                                <span className="relative">Update</span>
+                                            </a>
+                                        </Link>
+                                        <a href="#_" className="relative px-6 py-3 font-bold text-black group">
+                                            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+                                            <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
+                                            <span className="relative">Delete</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

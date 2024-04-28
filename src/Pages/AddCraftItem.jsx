@@ -85,7 +85,7 @@ const AddCraftItem = () => {
                                         <input type="text" placeholder="example- In stock, Made to Order" name="stockStatus" className="input input-bordered w-full max-w-xs" />
                                     </label>
                                 </div>
-                                {/* <input type="text" placeholder="subcategory Name" name="subcategory_Name" className="input input-bordered w-full max-w-xs" /> */}
+                               
                             </label>
                         </div>
                         <div>

@@ -22,7 +22,7 @@ const AllArtandCraft = () => {
                                 <th></th>
                                 <th>Item Name</th>
                                 <th>Sub-Category Name</th>
-                                <th>Short Description</th>
+                                <th>User Email</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +34,7 @@ const AllArtandCraft = () => {
                                         </td>
                                         <td>{allArtandCraftItem.item_name}</td>
                                         <td>{allArtandCraftItem.subcategory_Name}</td>
-                                        <td>{allArtandCraftItem.short_description}</td>
+                                        <td>{allArtandCraftItem.email}</td>
                                         <td ><Link to={`/craftItemDetails/${allArtandCraftItem._id}`}>View Details</Link></td>
                                     </tr>
                                 ))

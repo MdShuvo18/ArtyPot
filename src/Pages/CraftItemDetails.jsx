@@ -40,9 +40,6 @@ const CraftItemDetails = () => {
 
                         <h1  className="text-lg font-semibold text-black"><span className="text-red-500">Processing time:</span>{itemDetail.processing_time}</h1>
 
-                        {/* <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
-                        </div> */}
                     </div>
                 </div>
             </div>
