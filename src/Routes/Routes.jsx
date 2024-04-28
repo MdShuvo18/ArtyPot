@@ -10,6 +10,7 @@ import MyArtandCraftList from "../Pages/MyArtandCraftList";
 import PrivateRoutes from "../Pages/PrivateRoute";
 import CraftItemDetails from "../Pages/CraftItemDetails";
 import Update from "../components/Update";
+import MyCategorySection from "../components/MyCategorySection";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Home></Home>,
                 loader: () => fetch('http://localhost:5000/addCraftItem')
+            },
+            {
+                path: "/myCategorySection",
+                element: <MyCategorySection></MyCategorySection>,
+                // loader: () => fetch('http://localhost:5000/allArtandCraft')
             },
             {
                 path: '/allArtandCraftsItem',

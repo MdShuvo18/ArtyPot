@@ -15,7 +15,7 @@ import { Helmet } from "react-helmet";
 
 
 const Register = () => {
-  
+
     const { createUser } = useContext(AuthContext);
     const [register, setRegister] = useState('');
     const [success, setSuccess] = useState('');
@@ -83,10 +83,10 @@ const Register = () => {
     return (
         <div >
             <Helmet>
-            
+
                 <title>Register - This is Ragister Page</title>
             </Helmet>
-                <Navbar></Navbar>
+            <Navbar></Navbar>
             <div className="hero  bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center">
@@ -152,8 +152,8 @@ const Register = () => {
                 </div>
 
             </div>
-            
-           
+
+
             <Footer></Footer>
             <ToastContainer position="top-right" autoClose="2000"></ToastContainer>
         </div>

@@ -43,8 +43,8 @@ const Banner = () => {
             <SwiperSlide>
                 <div className='w-full h-[450px] relative'>
                     <img className='w-full h-[450px]' src="https://i.ibb.co/sqSN4WY/angele-kamp-IJZY2y-XYsp8-unsplash.jpg" alt="" />
-                    <div className='absolute top-24 left-12 space-y-4'>
-                        <h1 className='text-4xl text-white'>
+                    <div className='absolute top-24 left-10 lg:left-12 space-y-4'>
+                        <h1 className='lg:text-4xl text-white'>
                             We Make Thing With Love
                         </h1>
                         <p className='text-5xl font-extrabold text-white'>Hand Made Ceramic's</p>

@@ -8,7 +8,7 @@ const PrivateRoutes = ({ children }) => {
     const location = useLocation()
     // console.log(location.pathname)
     if (loading) {
-        return <div className="w-16 h-16 ml-[600px] border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+        return <div className="w-16 h-16 ml-[600px] border-4 border-dashed rounded-full animate-spin dark:border-l-purple-950"></div>
     }
     if (user) {
         return children

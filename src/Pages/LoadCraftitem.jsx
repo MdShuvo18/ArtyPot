@@ -1,16 +1,20 @@
+
 import { Link } from "react-router-dom";
 
 
 const LoadCraftitem = ({ craftItem }) => {
+    
     const { _id, image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, email, User_Name } = craftItem;
     // console.log(craftItem);
     return (
         <div>
+          
             <div className="w-96 h-full rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
                 <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
-                        <h2 className="text-3xl font-semibold tracking-wide">{item_name}</h2>
+                        <h2 className="text-3xl font-semibold tracking-wide">{subcategory_Name}</h2>
+                        <h2 className="text-lg font-semibold tracking-wide">{item_name}</h2>
                         <p className="dark:text-gray-800">{short_description}</p>
                     </div>
                     <Link to={`/craftItemDetails/${_id}`}><a href="#_" className="relative inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-indigo-600 border-2 border-indigo-600 rounded-full hover:text-white group hover:bg-gray-50">
@@ -22,6 +26,7 @@ const LoadCraftitem = ({ craftItem }) => {
                     </a></Link>
                 </div>
             </div>
+           
         </div>
     );
 };
