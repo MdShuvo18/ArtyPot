@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProviderContext/AuthProviderContext";
+import { Helmet } from "react-helmet";
 
 
 const AddCraftItem = () => {
@@ -49,6 +50,10 @@ const AddCraftItem = () => {
 
     return (
         <div className="space-y-5">
+            <Helmet>
+               
+                <title>Add Craft Item - This is Add Craft Item Page</title>
+            </Helmet>
             <Navbar></Navbar>
             <h1 className="text-4xl font-extrabold text-center text-fuchsia-300">Add Craft Items</h1>
             <div>

@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import { AuthContext } from "../AuthProviderContext/AuthProviderContext";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 // {image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, email, User_Name}
 
 const MyArtandCraftList = () => {
@@ -62,6 +63,10 @@ const MyArtandCraftList = () => {
 
     return (
         <div className="space-y-5">
+            <Helmet>
+                
+                <title>My Art and Craft List - This is my Art & Craft List page</title>
+            </Helmet>
             <Navbar></Navbar>
             <h1 className="text-4xl font-extrabold text-red-300 text-center">My Art & Craft List</h1>
             <div className="grid justify-items-center">

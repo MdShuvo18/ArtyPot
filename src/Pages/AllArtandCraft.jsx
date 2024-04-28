@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import { Helmet } from "react-helmet";
 
 
 
@@ -12,6 +13,9 @@ const AllArtandCraft = () => {
 
     return (
         <div className="space-y-10">
+            <Helmet>
+                <title>All Art and Craft - This is all Art and Craft page</title>
+            </Helmet>
             <Navbar></Navbar>
             <h1 className="text-4xl font-extrabold text-center text-green-500">All Art & Craft Items</h1>
             <div>

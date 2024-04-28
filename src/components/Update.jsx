@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Footer from "../Pages/Footer";
 import Navbar from "../Pages/Navbar";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 
 const Update = () => {
@@ -49,6 +50,9 @@ const Update = () => {
 
     return (
         <div className="space-y-10">
+            <Helmet>
+                <title>Update Craft Item - This is Update Craft Item page</title>
+            </Helmet>
             <Navbar></Navbar>
 
             <div>

@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 
 
@@ -80,9 +81,11 @@ const Register = () => {
 
 
     return (
-        <div data-aos="flip-right"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="1500">
+        <div >
+            <Helmet>
+            
+                <title>Register - This is Ragister Page</title>
+            </Helmet>
                 <Navbar></Navbar>
             <div className="hero  bg-base-200">
                 <div className="hero-content flex-col">

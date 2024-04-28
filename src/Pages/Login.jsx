@@ -11,6 +11,7 @@ import app from "../Firebase/firebase.config";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 
 
@@ -93,10 +94,11 @@ const Login = () => {
 
 
     return (
-        <div data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="1500">
-                <Navbar></Navbar>
+        <div>
+            <Helmet>
+                <title>Login - This is Log in page</title>
+            </Helmet>
+            <Navbar></Navbar>
             <div className="hero bg-base-200">
                 <div className="hero-content flex-col">
                     <div className="text-center">
@@ -162,7 +164,7 @@ const Login = () => {
                 </div>
 
             </div>
-          
+
             <Footer></Footer>
             <ToastContainer position="top-right" autoClose="2000"></ToastContainer>
         </div>
