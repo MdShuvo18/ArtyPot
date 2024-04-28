@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import LoadCraftitem from "./LoadCraftitem";
+import Blog from "../components/Blog";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
                 }
 
             </div>
+            <Blog></Blog>
             <Footer></Footer>
         </div>
     );

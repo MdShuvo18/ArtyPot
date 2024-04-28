@@ -50,7 +50,7 @@ const AddCraftItem = () => {
     return (
         <div className="space-y-5">
             <Navbar></Navbar>
-            <h1 className="text-4xl font-extrabold text-center">Add Craft Items</h1>
+            <h1 className="text-4xl font-extrabold text-center text-fuchsia-300">Add Craft Items</h1>
             <div>
                 <form onSubmit={handleAddCraftItem} className="md:ml-[150px] lg:ml-[530px] space-y-4">
                     {/* 1st */}
@@ -178,7 +178,7 @@ const AddCraftItem = () => {
                             </select>
                         </div>
 
-                    <button className="btn btn-success w-3/4 md:w-2/3 lg:w-2/5 ml-14 md:ml-6 lg:ml-10">Add</button>
+                    <button className="btn btn-success text-white w-3/4 md:w-2/3 lg:w-2/5 ml-14 md:ml-6 lg:ml-10">Add</button>
                 </form>
             </div>
 

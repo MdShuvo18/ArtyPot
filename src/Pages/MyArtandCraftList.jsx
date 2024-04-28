@@ -63,6 +63,7 @@ const MyArtandCraftList = () => {
     return (
         <div className="space-y-5">
             <Navbar></Navbar>
+            <h1 className="text-4xl font-extrabold text-red-300 text-center">My Art & Craft List</h1>
             <div className="grid justify-items-center">
                 <div className="dropdown dropdown-hover">
                     <div tabIndex={0} role="button" className="btn m-1">Customization</div>
@@ -73,11 +74,11 @@ const MyArtandCraftList = () => {
                     </ul>
                 </div>
             </div>
-            <div className="grid lg:grid-cols-2 justify-items-center gap-8">
+            <div className="grid  lg:grid-cols-2 justify-items-center gap-8">
                 {
                     myArtandCraftList.filter(item => customizationFilter === null || item.customization.toLowerCase() === customizationFilter)
                         .map(myArtandCraft => <div key={myArtandCraft._id}>
-                            <div className="max-w-lg p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
+                            <div className="max-w-lg h-full   p-4 shadow-md dark:bg-gray-50 dark:text-gray-800">
                                 <div className="space-y-4">
                                     <div className="space-y-2">
                                         <img src={myArtandCraft.image} alt="" className="block object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />

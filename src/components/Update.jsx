@@ -54,7 +54,7 @@ const Update = () => {
             <div>
                 <div className="space-y-5">
 
-                    <h1 className="text-4xl font-extrabold text-black text-center">Update Art & Craft Item</h1>
+                    <h1 className="text-4xl font-extrabold text-purple-400 text-center">Update Art & Craft Item</h1>
                     <div>
                         <form onSubmit={handleUpdateCraftItem} className="md:ml-[150px] lg:ml-[530px] space-y-4">
                             {/* 1st */}
@@ -158,7 +158,7 @@ const Update = () => {
                                 </select>
                             </div>
 
-                            <button className="btn btn-success w-3/4 md:w-2/3 lg:w-2/5 ml-14 md:ml-6 lg:ml-10">Update</button>
+                            <button className="btn text-white btn-success w-3/4 md:w-2/3 lg:w-2/5 ml-14 md:ml-6 lg:ml-10">Update</button>
                         </form>
                     </div>
 

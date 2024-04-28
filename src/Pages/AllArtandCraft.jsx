@@ -13,6 +13,7 @@ const AllArtandCraft = () => {
     return (
         <div className="space-y-10">
             <Navbar></Navbar>
+            <h1 className="text-4xl font-extrabold text-center text-green-500">All Art & Craft Items</h1>
             <div>
                 <div className="overflow-x-auto">
                     <table className="table">

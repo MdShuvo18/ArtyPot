@@ -17,14 +17,14 @@ const CraftItemDetails = () => {
         <div className="space-y-5">
             <Navbar></Navbar>
             <div className="grid justify-items-center">
-                <div className="card w-96 bg-sky-200 shadow-xl">
+                <div className="card w-full h-full  bg-sky-200 shadow-xl">
                     <figure className="px-10 pt-10">
-                        <img src={itemDetail.image} alt="Shoes" className="rounded-xl" />
+                        <img src={itemDetail.image} alt="Shoes" className="w-full h-[450px] rounded-xl" />
                     </figure>
 
                     <div className="flex justify-between mt-2">
-                        <h1 className="ml-4"><span className="text-red-600">Price :</span> {itemDetail.price}</h1>
-                        <h2 className="mr-4"><span className="text-red-600">Rating :</span> {itemDetail.rating}</h2>
+                        <h1 className="ml-10"><span className="text-red-600">Price :</span> {itemDetail.price}</h1>
+                        <h2 className="mr-10"><span className="text-red-600">Rating :</span> {itemDetail.rating}</h2>
                     </div>
                     <div className="card-body items-center text-center">
                         <p>{itemDetail.subcategory_Name}</p>

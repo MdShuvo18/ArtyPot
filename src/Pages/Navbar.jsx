@@ -32,7 +32,7 @@ const Navbar = () => {
             user && <>
                 <li><NavLink to='/AddCraftItem'>Add Craft Item</NavLink></li>
 
-                <li><NavLink to='/MyArtandCraftList'>My Art&Craft List</NavLink></li>
+                <li><NavLink to='/MyArtandCraftList'>My Art & Craft List</NavLink></li>
             </>
         }
     </>
