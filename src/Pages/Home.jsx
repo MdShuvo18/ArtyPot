@@ -17,13 +17,13 @@ const Home = () => {
     }
 
     return (
-        <div className="space-y-10">
+        <div  className="space-y-10">
             <Helmet>
                 <title>Home - This is Home page</title>
             </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
-            <h1 className="text-4xl font-extrabold text-center text-red-300">Craft Items Section</h1>
+            <h1 className="animate__animated  animate__rotateIn text-4xl font-extrabold text-center text-red-300">Craft Items Section</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 h-full">
                 {
                     loadCraftItems.slice(0, visible).map((craftItem) => <LoadCraftitem key={craftItem._id} craftItem={craftItem}></LoadCraftitem>)

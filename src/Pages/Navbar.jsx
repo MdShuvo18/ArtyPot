@@ -38,7 +38,7 @@ const Navbar = () => {
         }
     </>
     return (
-        <div data-aos="flip-down" data-aos-duration="1000" className="navbar bg-teal-200">
+        <div data-aos="flip-down" data-aos-duration="1000" className="navbar bg-stone-500">
 
             <div className="navbar-start">
                 <div className="dropdown">
@@ -51,8 +51,8 @@ const Navbar = () => {
                 </div>
                 <img className="rounded-full w-6 h-6" src="https://i.ibb.co/6m3c07Q/images.png" alt="" />
                 <a className="animate__animated animate__flash btn btn-ghost text-sm lg:text-3xl font-extrabold text-purple-800" >Pottery's Palette</a>
-                
-               
+
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -60,6 +60,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
+          
                 {
                     user ? (
                         <div className="lg:tooltip" data-tip={hoverName}>
