@@ -42,14 +42,14 @@ const Navbar = () => {
 
             <div className="navbar-start">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost z-10 lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
                         {links}
                     </ul>
                 </div>
-                <img className="rounded-full w-6 h-6" src="https://i.ibb.co/6m3c07Q/images.png" alt="" />
+                {/* <img className="rounded-full w-6 h-6" src="https://i.ibb.co/6m3c07Q/images.png" alt="" /> */}
                 <a className="animate__animated animate__flash btn btn-ghost text-sm lg:text-3xl font-extrabold text-purple-800" >Pottery's Palette</a>
 
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-4">
-          
+
                 {
                     user ? (
                         <div className="lg:tooltip" data-tip={hoverName}>
@@ -83,8 +83,10 @@ const Navbar = () => {
                     user
                         ? <button onClick={handleSignOut} className="btn btn-success bg-green-700 text-black border-none">Sign Out</button>
                         : <div>
-                            <Link to='/login'> <button className="btn btn-success bg-green-700 text-white border-none">Login</button></Link>
-                            <Link to='/register'> <button className="btn btn-success bg-green-700 text-white border-none">Register</button></Link>
+                            <div className="flex flex-row gap-1">
+                                <Link to='/login'> <button className="btn btn-success bg-green-700 text-white border-none">Login</button></Link>
+                                <Link to='/register'> <button className="btn btn-success bg-green-700 text-white border-none">Register</button></Link>
+                            </div>
                         </div>
                 }
 
