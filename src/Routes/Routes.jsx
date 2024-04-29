@@ -12,6 +12,7 @@ import CraftItemDetails from "../Pages/CraftItemDetails";
 import Update from "../components/Update";
 import MyCategorySection from "../components/MyCategorySection";
 import SubcategorySection from "../components/SubcategorySection";
+import SubcategoryViewDetails from "../components/SubcategoryViewDetails";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
                 path:'/subcategorysection/:subcategory_Name',
                 element:<SubcategorySection></SubcategorySection>,
                 loader:({params})=>fetch(`http://localhost:5000/subcategorysection/${params.subcategory_Name}`)
+            },
+            {
+                path:'/subCategoryViewDetails/:id',
+                element:<SubcategoryViewDetails></SubcategoryViewDetails>,
+                loader:()=>fetch('http://localhost:5000/addCraftItem')
+
             },
             {
                 path: '/allArtandCraftsItem',

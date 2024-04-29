@@ -1,7 +1,7 @@
 
 import Navbar from "../Pages/Navbar";
 import Footer from "../Pages/Footer";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const SubcategorySection = () => {
@@ -29,9 +29,11 @@ const SubcategorySection = () => {
                                 <p><span className="font-semibold text-green-950">Processing time</span> : {item.processing_time}</p>
 
 
-                                <div className="card-actions">
-                                    <button className="btn btn-primary">View Details</button>
-                                </div>
+                                <Link to={`/subCategoryViewDetails/${item._id}`}>
+                                    <div className="card-actions">
+                                        <button className="btn btn-primary">View Details</button>
+                                    </div>
+                                </Link>
 
 
                             </div>
