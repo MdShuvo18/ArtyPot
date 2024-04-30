@@ -1,6 +1,6 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {  Cursor, useTypewriter } from 'react-simple-typewriter'
+import {  Typewriter} from 'react-simple-typewriter'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,17 +13,14 @@ import './Banner.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
-    const{text}=useTypewriter({
-        words: ['Love','Passion','Happiness'],
-        loop:{}
-    })
+
 
     return (
         <Swiper
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-                delay: 6000,
+                delay: 7000,
                 disableOnInteraction: false,
             }}
             pagination={{
@@ -38,11 +35,20 @@ const Banner = () => {
                     <img className='w-full h-[450px]' src="https://i.ibb.co/6sDfn4c/liz99-7-Eee-SN-e-Gs-I-unsplash.jpg" alt="" />
                     <div className='absolute top-24 left-0 space-y-4'>
                         <h1 className='text-4xl text-white'>
-                            We Make Thing With 
-                            <span className='font-bold text-red-500'>
-                                    {text}
+                            We Make Thing With
+                            <span style={{ color: 'red', fontWeight: 'bold' }}>
+                                {/* Style will be inherited from the parent element */}
+                                <Typewriter
+                                    words={['Love', 'Passion', 'Happines']}
+                                    loop={0 | false}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                    
+                                />
                             </span>
-                            <Cursor></Cursor>
                         </h1>
                         <p className='text-5xl font-extrabold text-white'>Hand Made Kettle's</p>
                         <p className='text-xl font-semibold text-white'>
@@ -55,7 +61,20 @@ const Banner = () => {
                     <img className='w-full h-[450px]' src="https://i.ibb.co/sqSN4WY/angele-kamp-IJZY2y-XYsp8-unsplash.jpg" alt="" />
                     <div className='absolute top-24 left-0 lg:left-12 space-y-4'>
                         <h1 className='lg:text-4xl text-white'>
-                            We Make Thing With Love
+                            We Make Thing With 
+                            <span style={{ color: 'red', fontWeight: 'bold' }}>
+                                {/* Style will be inherited from the parent element */}
+                                <Typewriter
+                                    words={['Love', 'Passion', 'Happines']}
+                                    loop={0 | false}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                    
+                                />
+                            </span>
                         </h1>
                         <p className='text-5xl font-extrabold text-white'>Hand Made Ceramic's</p>
                         <p className='text-xl font-semibold text-white'>From intricately designed vases and bowls to beautifully sculpted figurines and tableware, our handmade ceramics blend artistry with functionality making them perfect.</p>
@@ -67,7 +86,20 @@ const Banner = () => {
                     <img className='w-full h-[450px]' src="https://i.ibb.co/myZTt56/tom-crew-o-Hr-C8-V-XRU4-unsplash.jpg" alt="" />
                     <div className='absolute top-24 left-0 space-y-4'>
                         <h1 className='text-4xl text-white'>
-                            We Make Thing With Love
+                            We Make Thing With 
+                            <span style={{ color: 'red', fontWeight: 'bold' }}>
+                                {/* Style will be inherited from the parent element */}
+                                <Typewriter
+                                    words={['Love', 'Passion', 'Happines']}
+                                    loop={0 |false}
+                                    cursor
+                                    cursorStyle='_'
+                                    typeSpeed={70}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                    
+                                />
+                            </span>
                         </h1>
                         <p className='text-5xl font-extrabold text-white'>Hand Made Cup's</p>
                         <p className='text-xl font-semibold text-white'>Indulge in the unparalleled charm of handcrafted cups, where every sip tells a story of artisanal mastery and timeless elegance. Crafted with meticulous attention to detail. </p>
