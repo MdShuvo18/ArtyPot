@@ -5,7 +5,7 @@ const Blog = () => {
         <div className="space-y-10">
             <h1 className="text-4xl font-extrabold text-emerald-700 text-center">Blog Review</h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-4">
-                <div className="bg-orange-100 flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
+                <div data-aos="fade-right" className="bg-orange-100 flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex space-x-4">
                         <img alt="" src="https://i.ibb.co/0X3kgN4/vince-veras-AJIq-ZDAUD7-A-unsplash.jpg" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                         <div className="flex flex-col space-y-1">
@@ -49,7 +49,7 @@ const Blog = () => {
                     </div>
                 </div>
 
-                <div className="bg-orange-100  flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
+                <div data-aos="fade-left" className="bg-orange-100  flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex space-x-4">
                         <img alt="" src="https://i.ibb.co/26dbXdL/rivage-jzz-3j-WMz-HA-unsplash.jpg" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                         <div className="flex flex-col space-y-1">
@@ -93,7 +93,7 @@ const Blog = () => {
                     </div>
                 </div>
 
-                <div className="bg-orange-100  flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
+                <div data-aos="fade-right" className="bg-orange-100  flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex space-x-4">
                         <img alt="" src="https://i.ibb.co/Pc28Xt4/usman-yousaf-y-IOVi-GQmj-J4-unsplash.jpg" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                         <div className="flex flex-col space-y-1">
@@ -137,7 +137,7 @@ const Blog = () => {
                     </div>
                 </div>
 
-                <div className="bg-orange-100  flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
+                <div data-aos="fade-left" className="bg-orange-100  flex flex-col max-w-lg p-6 space-y-6 overflow-hidden rounded-lg shadow-md dark:bg-gray-50 dark:text-gray-800">
                     <div className="flex space-x-4">
                         <img alt="" src="https://i.ibb.co/ZcXKjnd/ben-den-engelsen-YUu9-UAc-OKZ4-unsplash.jpg" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                         <div className="flex flex-col space-y-1">

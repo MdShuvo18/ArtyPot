@@ -77,9 +77,10 @@ const MyArtandCraftList = () => {
                         <li><button onClick={() => handleCustomization("No")}>No</button></li>
 
                     </ul>
+
                 </div>
             </div>
-            <div className="grid  lg:grid-cols-2 justify-items-center gap-8">
+            <div data-aos="flip-up" className="grid  lg:grid-cols-2 justify-items-center gap-8">
                 {
                     myArtandCraftList.filter(item => customizationFilter === null || item.customization.toLowerCase() === customizationFilter)
                         .map(myArtandCraft => <div key={myArtandCraft._id}>
