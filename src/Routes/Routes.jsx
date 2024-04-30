@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/addCraftItem')
+                loader: () => fetch('https://art-and-craft-store-server.vercel.app/addCraftItem')
             },
             {
                 path: "/myCategorySection",
@@ -32,18 +32,18 @@ const router = createBrowserRouter([
             {
                 path:'/subcategorysection/:subcategory_Name',
                 element:<SubcategorySection></SubcategorySection>,
-                loader:({params})=>fetch(`http://localhost:5000/subcategorysection/${params.subcategory_Name}`)
+                loader:({params})=>fetch(`art-and-craft-store-server.vercel.app/subcategorysection/${params.subcategory_Name}`)
             },
             {
                 path:'/subCategoryViewDetails/:id',
                 element:<SubcategoryViewDetails></SubcategoryViewDetails>,
-                loader:()=>fetch('http://localhost:5000/addCraftItem')
+                loader:()=>fetch('https://art-and-craft-store-server.vercel.app/addCraftItem')
 
             },
             {
                 path: '/allArtandCraftsItem',
                 element: <AllArtandCraft></AllArtandCraft>,
-                loader: () => fetch('http://localhost:5000/addCraftItem')
+                loader: () => fetch('https://art-and-craft-store-server.vercel.app/addCraftItem')
             },
             {
                 path: '/AddCraftItem',
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
             {
                 path: '/craftItemDetails/:id',
                 element: <PrivateRoutes><CraftItemDetails></CraftItemDetails></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/addCraftItem')
+                loader: () => fetch('https://art-and-craft-store-server.vercel.app/addCraftItem')
             },
             {
                 path: '/MyArtandCraftList',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             {
                 path: '/updateList/:id',
                 element: <PrivateRoutes><Update></Update></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/addCraftItem/${params.id}`)
+                loader: ({ params }) => fetch(`https://art-and-craft-store-server.vercel.app/${params.id}`)
             },
             {
                 path: '/login',

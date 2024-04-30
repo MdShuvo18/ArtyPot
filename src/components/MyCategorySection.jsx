@@ -7,7 +7,7 @@ const MyCategorySection = () => {
     const [loadCatetgory, setCategory] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch("http://localhost:5000/allArtandCraft")
+        fetch("https://art-and-craft-store-server.vercel.app/allArtandCraft")
             .then(res => res.json())
             .then(data => {
                 setCategory(data)

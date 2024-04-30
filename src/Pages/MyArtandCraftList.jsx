@@ -43,7 +43,7 @@ const MyArtandCraftList = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/addCraftItem/${_id}`, {
+                fetch(`https://art-and-craft-store-server.vercel.app/addCraftItem/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

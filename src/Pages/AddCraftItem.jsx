@@ -26,7 +26,7 @@ const AddCraftItem = () => {
 
         const addItemValue = { image, item_name, subcategory_Name, short_description, price, rating, customization, processing_time, stockStatus, email, User_Name }
         console.log(addItemValue);
-        fetch('http://localhost:5000/addCraftItem', {
+        fetch('https://art-and-craft-store-server.vercel.app/addCraftItem', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
