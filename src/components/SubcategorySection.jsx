@@ -11,7 +11,7 @@ const SubcategorySection = () => {
     return (
         <div className="space-y-10">
             <Navbar></Navbar>
-            <div className="grid lg:grid-cols-2 justify-items-center gap-5">
+            <div className="grid  lg:grid-cols-2 justify-items-center gap-5">
                 {
                     loadData.map(item => <div key={item._id}>
                         <div className="card w-96 bg-red-100 shadow-xl">

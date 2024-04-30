@@ -5,9 +5,9 @@ const ExtraSection = () => {
         <div className="space-y-10">
 
             <h2 className="text-4xl font-extrabold text-center text-cyan-800">Some Of Our Portfolio</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 justify-items-center">
                 {/* 1st */}
-                <div className="max-w-xs p-6 bg-stone-400 rounded-md shadow-md dark:text-gray-900">
+                <div  data-aos="flip-up" data-aos-duration="1500" className="max-w-xs p-6 bg-stone-400 rounded-md shadow-md dark:text-gray-900">
                     <img src="https://i.ibb.co/9G0p9vY/home4-portfolio-1.jpg" alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
                     <div className="mt-6 mb-2">
                         <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">CUPS</span>
@@ -17,7 +17,7 @@ const ExtraSection = () => {
                 </div>
 
                 {/* 2nd */}
-                <div className="max-w-xs p-6 bg-stone-400  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                <div data-aos="flip-down" data-aos-duration="1500" className="max-w-xs p-6 bg-stone-400  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
                     <img src="https://i.ibb.co/tLsKcWp/home4-portfolio-2.jpg" alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
                     <div className="mt-6 mb-2">
                         <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">CERAMICS</span>
@@ -27,7 +27,7 @@ const ExtraSection = () => {
                 </div>
 
                 {/* 3rd */}
-                <div className="max-w-xs p-6 bg-stone-400  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
+                <div data-aos="flip-up" data-aos-duration="1500" className="max-w-xs p-6 bg-stone-400  rounded-md shadow-md dark:bg-gray-50 dark:text-gray-900">
                     <img src="https://i.ibb.co/C7zg4Qg/home4-portfolio-3.jpg" alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500" />
                     <div className="mt-6 mb-2">
                         <span className="block text-xs font-medium tracking-widest uppercase dark:text-violet-600">CERAMICS</span>
