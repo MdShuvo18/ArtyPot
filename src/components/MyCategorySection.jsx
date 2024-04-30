@@ -24,7 +24,7 @@ const MyCategorySection = () => {
     return (
         <div className="space-y-10">
             <h1 className="text-3xl font-extrabold text-red-400 text-center">Ceramics and Pottery Category section Here</h1>
-            <div className="  grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-5">
+            <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-center gap-5">
                 {
                     loadCatetgory.map(category =>
                         <div onClick={() => handlecategory(category.subcategory_Name)} key={category._id}>
