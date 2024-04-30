@@ -50,7 +50,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 {/* <img className="rounded-full w-6 h-6" src="https://i.ibb.co/6m3c07Q/images.png" alt="" /> */}
-                <a className="animate__animated animate__flash btn btn-ghost text-sm lg:text-3xl font-extrabold text-purple-800" >Pottery's Palette</a>
+                <a className="animate__animated animate__flash btn btn-ghost text-sm lg:text-3xl font-extrabold text-purple-800" >ArtyPot</a>
 
 
             </div>

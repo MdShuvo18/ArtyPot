@@ -7,6 +7,7 @@ import Blog from "../components/Blog";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import MyCategorySection from "../components/MyCategorySection";
+import ExtraSection from "./ExtraSection";
 
 
 const Home = () => {
@@ -43,6 +44,7 @@ const Home = () => {
                     )
                 }
             </div>
+            <ExtraSection></ExtraSection>
             <MyCategorySection></MyCategorySection>
             <Blog></Blog>
             <Footer></Footer>
