@@ -26,6 +26,13 @@ npm install
 ## Running the Project
 npm start
 
+## Technology used in this projects
+- **JavaScript** 
+- **React**
+- **Tailwind**
+- **Node.js**
+- **Mongodb**
+
 # ArtyPot - Destination for Ceramics and Pottery
 **Live Site URL:** [https://art-and-craft-store-c1aff.web.app/]
 
