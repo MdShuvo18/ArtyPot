@@ -8,4 +8,4 @@ ArtyPot is your go-to destination for all things ceramics and pottery. Whether y
 - **Artisan Spotlight:** Get to know the artisans behind the creations through our artisan spotlight feature, where we showcase their stories, techniques, and unique styles.
 - **Educational Resources:** Access a wealth of educational resources, including tutorials, articles, and videos, to hone your skills, learn new techniques, and stay updated on the latest trends in ceramics and pottery.
 - **Community Forum:** Join our vibrant community of ceramics and pottery enthusiasts to connect with like-minded individuals, share your work, ask questions, and exchange tips and advice.# 
-# Selected Category Name: Ceramics and Pottery
+
